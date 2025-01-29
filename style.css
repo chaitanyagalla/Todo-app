@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&display=swap");
+
+.todos-bg-container {
+    background-color: #f9fbfe;
+    height: 100vh;
+}
+
+.todos-heading {
+    text-align: center;
+    font-family: "Roboto";
+    font-size: 46px;
+    font-weight: 500;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.create-task-heading {
+    font-family: "Roboto";
+    font-size: 32px;
+    font-weight: 700;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+.create-task-heading-subpart {
+    font-family: "Roboto";
+    font-size: 32px;
+    font-weight: 500;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+.todo-items-heading {
+    font-family: "Roboto";
+    font-size: 32px;
+    font-weight: 700;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.todo-items-heading-subpart {
+    font-family: "Roboto";
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.todo-items-container {
+    margin: 0px;
+    padding: 0px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.todo-item-container {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    background-color: #e6f6ff;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #096f92;
+    transition: all 0.3s ease;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+.todo-item-container:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.todo-user-input {
+    background-color: white;
+    width: 100%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #e4e7eb;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 15px;
+    transition: all 0.3s ease;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+.todo-user-input:focus {
+    border-color: #4c63b6;
+    outline: none;
+    box-shadow: 0 0 5px rgba(76, 99, 182, 0.5);
+    
+}
+
+.button {
+    color: white;
+    background-color: #4c63b6;
+    font-family: "Roboto";
+    font-size: 18px;
+    border-width: 0px;
+    border-radius: 4px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 20px;
+    padding-left: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+.button:hover {
+    background-color: hsl(228, 41%, 39%);
+    transform: scale(1);
+}
+
+.button:active {
+    transform: scale(1);
+}
+
+.label-container {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.checkbox-input {
+    width: 20px;
+    height: 20px;
+    margin-right: 12px;
+    transition: all 0.3s ease;
+}
+
+.checkbox-input:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.checkbox-label {
+    font-family: "Roboto";
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 5px;
+    flex: 1;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.checkbox-label.checked {
+    text-decoration: line-through;
+    color: #808080;
+}
+
+.delete-icon-container {
+    padding: 10px;
+    transition: transform 0.3s ease;
+}
+
+.delete-icon-container:hover {
+    transform: scale(1.2);
+    
+}
+
+.delete-icon {
+    font-size: 20px;
+    color: red;
+    transition: color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+.delete-icon:hover {
+    color: darkred;
+    transform: scale(1.2);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Animations for deleted item */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+}
